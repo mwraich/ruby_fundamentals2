@@ -43,11 +43,22 @@ add(students)
 students.delete(:cohort2)
 display(students)
 
+
 #7
-def total(everybody)
-  # everybody.each do |name, count|
-  #   tally =
-  puts "Total number of students is #{everybody.sum}"
+
+# def total(everybody)
+#   tally = 0
+#   everybody.each do |name, count|
+#     tally += count
+# end
+#   puts "Total number of students is #{tally}"
+# end
+#
+# total(students)
+
+def injection(x)
+  v= x.inject(0) {|tally, (k , v)| tally + v}
+  puts "Total number of students is #{v}"
 end
 
-total(update)
+injection(students)
