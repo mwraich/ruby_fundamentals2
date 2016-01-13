@@ -4,6 +4,7 @@ students = {
   cohort2: 42,
   cohort3: 22
 }
+
 #2
 def display(item)
   puts "Bitmaker"
@@ -22,6 +23,7 @@ def keys(first)
     puts "#{first}"
   end
 end
+ puts students.values
 
 keys(students)
 
@@ -46,19 +48,23 @@ display(students)
 
 #7
 
-# def total(everybody)
-#   tally = 0
-#   everybody.each do |name, count|
-#     tally += count
-# end
-#   puts "Total number of students is #{tally}"
-# end
-#
-# total(students)
+def total(everybody)
+  tally = 0
+  everybody.each do |name, count|
+    tally += count
+end
+  puts "Total number of students is #{tally}"
+end
+
+total(students)
 
 def injection(x)
   v= x.inject(0) {|tally, (k , v)| tally + v}
   puts "Total number of students is #{v}"
 end
-
 injection(students)
+total_students = students.values.reduce(:+)
+puts total_students
+
+t_students = students.values.inject(:+)
+puts t_students
