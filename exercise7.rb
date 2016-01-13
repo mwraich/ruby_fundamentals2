@@ -27,11 +27,27 @@ keys(students)
 
 #5
 def add(object)
-  puts "Bitmaker"
+  puts "Bitmaker Increase"
   object.each do |cohort, number|
   increase= number * 0.05
   puts "#{cohort}: #{((number + increase).to_i)}"
+  object[cohort.to_sym] = (number + increase).to_i
   end
 end
 
 add(students)
+
+
+
+#6
+students.delete(:cohort2)
+display(students)
+
+#7
+def total(everybody)
+  # everybody.each do |name, count|
+  #   tally =
+  puts "Total number of students is #{everybody.sum}"
+end
+
+total(update)
