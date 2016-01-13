@@ -10,3 +10,6 @@ def display(item)
 end
 
 display(students)
+
+#3
+students[:cohort4]= 43
