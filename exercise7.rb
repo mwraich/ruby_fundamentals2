@@ -16,6 +16,16 @@ display(students)
 students[:cohort4]= 43
 
 #4
+def keys(first)
+  puts "Name"
+  first.each do |first, second|
+    puts "#{first}"
+  end
+end
+
+keys(students)
+
+#5
 def add(object)
   puts "Bitmaker"
   object.each do |cohort, number|
